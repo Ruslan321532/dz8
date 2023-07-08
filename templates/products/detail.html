@@ -1,0 +1,30 @@
+{% extends 'layouts/index.html' %}
+
+{% block content %}
+    <style type="text/css">
+    .product_block {
+        width: 80%;
+        margin-left: 10%;
+        padding: 20px;
+    }
+    .image > img {
+        width: 100%;
+    }
+    .dates {
+        display: flex;
+        justify-content: space-between;
+    }
+    </style>
+    <div class="product_block">
+        <div class="image">
+            <img src="/media/{{ product.image }}" alt="">
+        </div>
+        <h1>{{ product.title }}</h1>
+        <h5>{{ product.description }}</h5>
+        <div class="dates">
+            <h6>{{ product.created_at }}</h6>
+            <h6>{{ product.modified_at }}</h6>
+        </div>
+    </div>
+{#    <h1>{{ product.title }}</h1>#}
+{% endblock %}

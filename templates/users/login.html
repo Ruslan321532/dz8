@@ -1,0 +1,14 @@
+{% extends 'layouts/index.html' %}
+
+{% block content %}
+    <div style="display: flex; justify-content: center; align-items: center; height: 80vh">
+        <div>
+            <h1>Login Form</h1>
+            <form action="/users/login/" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+{% endblock %}
